@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charlotte Debras - Academic Portfolio & AI Companion</title>
+  <title>Charlotte Debras - Portfolio & Resume</title>
   
   <!-- Favicon (Tab Icon) -->
-  <link rel="icon" type="image/jpeg" href="./CV_Picture.jpeg">
-  <link rel="apple-touch-icon" href="./CV_Picture.jpeg">
+  <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/CharlotteCDebras/cv-charlotte/main/CV_Picture.jpeg">
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/CharlotteCDebras/cv-charlotte/main/CV_Picture.jpeg">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -94,20 +94,6 @@
       box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
-    /* Wave bar animation for AI speech playing */
-    @keyframes soundwave {
-      0%, 100% { height: 4px; }
-      50% { height: 16px; }
-    }
-    .wave-bar {
-      width: 3px;
-      background-color: currentColor;
-      border-radius: 3px;
-      animation: soundwave 1s ease-in-out infinite;
-    }
-    .wave-bar:nth-child(2) { animation-delay: 0.2s; }
-    .wave-bar:nth-child(3) { animation-delay: 0.4s; }
-
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
@@ -139,12 +125,6 @@
 
     <!-- Toolbar Controls -->
     <div class="flex items-center gap-2">
-      <!-- Gemini AI floating button -->
-      <button onclick="toggleAiModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300/80 dark:border-emerald-700 shadow-sm text-[11px] font-bold text-emerald-800 dark:text-emerald-200 hover:scale-105 transition">
-        <i class="fa-solid fa-wand-magic-sparkles text-emerald-600 dark:text-emerald-400"></i>
-        <span data-i18n="aiAskBtn">Ask AI</span>
-      </button>
-
       <!-- Language Toggle EN/FR -->
       <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sage-100 dark:bg-slate-800 border border-sage-200 dark:border-slate-700 shadow-sm text-[11px] font-bold text-sage-600 dark:text-sage-200 hover:scale-105 transition">
         <i class="fa-solid fa-globe text-sage-600 dark:text-sage-200"></i>
@@ -164,8 +144,8 @@
     <section class="glass-card p-6 text-center space-y-4">
       <div class="relative inline-block group">
         <img 
-          src="./CV_Picture.jpeg" 
-          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80';"
+          src="https://raw.githubusercontent.com/CharlotteCDebras/cv-charlotte/main/CV_Picture.jpeg" 
+          onerror="this.onerror=null; this.src='./CV_Picture.jpeg';"
           alt="Charlotte Debras" 
           class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-sage-200 dark:border-slate-700 shadow-md mx-auto transition group-hover:scale-105"
         >
@@ -195,17 +175,6 @@
           <i class="fa-solid fa-envelope text-[11px]"></i>
           <span data-i18n="contactBtn">Contact</span>
         </a>
-
-        <!-- Gemini Audio Overview Button -->
-        <button id="tts-btn" onclick="generateAiAudioOverview()" class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-semibold shadow hover:bg-emerald-700 transition flex items-center gap-1.5">
-          <i id="tts-icon" class="fa-solid fa-volume-high text-[11px]"></i>
-          <span id="tts-text" data-i18n="audioOverviewBtn">Listen AI Overview</span>
-          <div id="tts-wave" class="hidden items-center gap-0.5 h-3 ml-1">
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-          </div>
-        </button>
 
         <a href="https://www.linkedin.com/in/charlotte-d-a18b7a174/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-semibold shadow-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center gap-1.5">
           <i class="fa-brands fa-linkedin-in text-blue-600"></i>
@@ -255,32 +224,28 @@
         <div class="sub-card p-4 space-y-2.5 text-xs text-slate-700 dark:text-slate-200">
           <h3 class="text-xs font-bold uppercase tracking-wider text-sage-600 dark:text-sage-200 mb-2" data-i18n="contactTitle">Contact & Personal Info</h3>
 
-          <!-- Email -->
           <div class="flex items-center gap-3">
             <svg class="w-4 h-4 shrink-0 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             <a href="mailto:charlotte.debras@icloud.com" class="hover:underline font-medium">charlotte.debras@icloud.com</a>
           </div>
 
-          <!-- Phone -->
           <div class="flex items-center gap-3">
             <svg class="w-4 h-4 shrink-0 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             <span>+33 6 34 56 48 49</span>
           </div>
 
-          <!-- Driving License (B) -->
           <div class="flex items-center gap-3">
             <svg class="w-4 h-4 shrink-0 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4zM3 11l2-5h14l2 5M3 11h18v5a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H7v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-5z" /></svg>
             <span data-i18n="license">Driving licence (B)</span>
           </div>
 
-          <!-- Citizenship -->
           <div class="flex items-center gap-3">
             <svg class="w-4 h-4 shrink-0 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V7a2 2 0 00-2-2h-1.5a.5.5 0 01-.5-.5V3.935M12 21a9 9 0 100-18 9 9 0 000 18z" /></svg>
             <span data-i18n="citizenship">French (EU citizen)</span>
           </div>
         </div>
 
-        <!-- SKILLS SECTION (Structured: Hard Skills & Soft Skills) -->
+        <!-- SKILLS SECTION -->
         <div class="sub-card p-5 space-y-4">
           <div class="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-2.5">
             <i class="fa-solid fa-code text-sage-600 text-xs"></i>
@@ -288,11 +253,9 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-1">
-            <!-- HARD SKILLS COLUMN -->
             <div class="space-y-3">
               <h4 class="text-[11px] font-extrabold tracking-wider uppercase text-slate-400 dark:text-slate-500" data-i18n="hardSkills">HARD SKILLS</h4>
 
-              <!-- CODE -->
               <div class="space-y-1.5">
                 <p class="text-[10px] font-bold text-sage-600 dark:text-sage-200 uppercase tracking-wider flex items-center gap-1.5">
                   <i class="fa-solid fa-terminal text-[10px]"></i>
@@ -305,7 +268,6 @@
                 </div>
               </div>
 
-              <!-- TOOLS -->
               <div class="space-y-1.5">
                 <p class="text-[10px] font-bold text-sage-600 dark:text-sage-200 uppercase tracking-wider flex items-center gap-1.5">
                   <i class="fa-solid fa-wrench text-[10px]"></i>
@@ -322,25 +284,22 @@
                 </div>
               </div>
 
-              <!-- METHODS -->
               <div class="space-y-1.5">
                 <p class="text-[10px] font-bold text-sage-600 dark:text-sage-200 uppercase tracking-wider flex items-center gap-1.5">
                   <i class="fa-solid fa-brain text-[10px]"></i>
                   <span data-i18n="methodsLabel">METHODS</span>
                 </p>
                 <div class="flex flex-wrap gap-1.5 text-xs">
-                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium">Data analyses (Frequentist & Bayesian)</span>
-                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium">Data visualisation</span>
-                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium">Financial modelling</span>
+                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium" data-i18n="meth1">Data analyses (Frequentist & Bayesian)</span>
+                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium" data-i18n="meth2">Data visualisation</span>
+                  <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-1 rounded-lg font-medium" data-i18n="meth3">Financial modelling</span>
                 </div>
               </div>
             </div>
 
-            <!-- SOFT SKILLS COLUMN -->
             <div class="space-y-3 pt-3 md:pt-0 border-t md:border-t-0 md:border-l border-slate-100 dark:border-slate-800 md:pl-5">
               <h4 class="text-[11px] font-extrabold tracking-wider uppercase text-slate-400 dark:text-slate-500" data-i18n="softSkills">SOFT SKILLS</h4>
 
-              <!-- COMMUNICATION -->
               <div class="space-y-1.5">
                 <p class="text-[10px] font-bold text-sage-600 dark:text-sage-200 uppercase tracking-wider flex items-center gap-1.5">
                   <i class="fa-solid fa-comments text-[10px]"></i>
@@ -353,7 +312,6 @@
                 </div>
               </div>
 
-              <!-- MINDSET -->
               <div class="space-y-1.5">
                 <p class="text-[10px] font-bold text-sage-600 dark:text-sage-200 uppercase tracking-wider flex items-center gap-1.5">
                   <i class="fa-solid fa-bolt text-[10px]"></i>
@@ -418,7 +376,7 @@
           <div class="space-y-2.5 pt-0.5">
             <div class="flex justify-between items-start gap-2">
               <div>
-                <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Wildlife Rehabilitation Volunteer</h4>
+                <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="voltRole">Wildlife Rehabilitation Volunteer</h4>
                 <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">ONCA – Organization for the Natives and Conservation of the Amazon</p>
               </div>
               <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2 py-0.5 rounded-full shrink-0">2018 & 2019</span>
@@ -430,19 +388,19 @@
             </p>
 
             <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside pt-1">
-              <li>Spearheaded veterinary-supervised rehabilitation for endangered Amazonian fauna (<i>Ateles chamek</i>, <i>Panthera onca</i>, <i>Leopardus pardalis</i>, <i>Cebus apella</i>).</li>
-              <li>Executed parasitological diagnostics and implemented behavioral enrichment programs to advance hands-on biodiversity conservation.</li>
+              <li data-i18n="voltTask1">Spearheaded veterinary-supervised rehabilitation for endangered Amazonian fauna (Ateles chamek, Panthera onca, Leopardus pardalis, Cebus apella).</li>
+              <li data-i18n="voltTask2">Executed parasitological diagnostics and implemented behavioral enrichment programs to advance hands-on biodiversity conservation.</li>
             </ul>
 
             <div class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800">
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Biodiversity Conservation</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Wildlife Rehabilitation</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Field Operations</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="badgeBio">Biodiversity Conservation</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="badgeWild">Wildlife Rehabilitation</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="badgeField">Field Operations</span>
             </div>
           </div>
         </div>
 
-        <!-- Interests & Hobbies (3-column responsive grid) -->
+        <!-- Interests & Hobbies -->
         <div class="sub-card p-5 space-y-4">
           <div class="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-2.5">
             <i class="fa-solid fa-heart text-sage-600 text-xs"></i>
@@ -450,73 +408,40 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
-            <!-- Column 1: Sports -->
             <div class="flex flex-col items-center text-center space-y-3">
               <div class="w-10 h-10 rounded-2xl bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-200 shadow-sm border border-sage-200/50 dark:border-slate-700">
                 <i class="fa-solid fa-dumbbell text-sm"></i>
               </div>
               <h4 class="text-xs font-extrabold tracking-wider uppercase text-slate-900 dark:text-white" data-i18n="sportsTitle">SPORTS</h4>
               <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-2 text-left w-full">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-water text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Surf</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-flag text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Golf (competition)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-person-skiing text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Ski</span>
-                </li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-water text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span>Surf</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-flag text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="golfItem">Golf (competition)</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-person-skiing text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span>Ski</span></li>
               </ul>
             </div>
 
-            <!-- Column 2: Adventure -->
             <div class="flex flex-col items-center text-center space-y-3 pt-3 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-100 dark:border-slate-800 sm:pl-3">
               <div class="w-10 h-10 rounded-2xl bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-200 shadow-sm border border-sage-200/50 dark:border-slate-700">
                 <i class="fa-solid fa-compass text-sm"></i>
               </div>
               <h4 class="text-xs font-extrabold tracking-wider uppercase text-slate-900 dark:text-white" data-i18n="adventureTitle">ADVENTURE</h4>
               <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-2 text-left w-full">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-person-walking-luggage text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span data-i18n="advItem1">Solo backpacking for 3 months (2016)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-earth-americas text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span data-i18n="advItem2">Travelled in +30 countries</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-icons text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span data-i18n="advItem3">Passionate about discovering new cultures</span>
-                </li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-person-walking-luggage text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="advItem1">Solo backpacking for 3 months (2016)</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-earth-americas text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="advItem2">Travelled in +30 countries</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-icons text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="advItem3">Passionate about discovering new cultures</span></li>
               </ul>
             </div>
 
-            <!-- Column 3: Arts -->
             <div class="flex flex-col items-center text-center space-y-3 pt-3 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-100 dark:border-slate-800 sm:pl-3">
               <div class="w-10 h-10 rounded-2xl bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-200 shadow-sm border border-sage-200/50 dark:border-slate-700">
                 <i class="fa-solid fa-palette text-sm"></i>
               </div>
               <h4 class="text-xs font-extrabold tracking-wider uppercase text-slate-900 dark:text-white" data-i18n="artsTitle">ARTS</h4>
               <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-2 text-left w-full">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-camera text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Photography</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-film text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Filmmaking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-pen-nib text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span>Aesthetic design conception</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-music text-sage-600 shrink-0 mt-0.5 text-[10px]"></i>
-                  <span data-i18n="musicItem">Music lover: playlist for everything</span>
-                </li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-camera text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="artPhoto">Photography</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-film text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="artFilm">Filmmaking</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-pen-nib text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="artDesign">Aesthetic design conception</span></li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-music text-sage-600 shrink-0 mt-0.5 text-[10px]"></i><span data-i18n="musicItem">Music lover: playlist for everything</span></li>
               </ul>
             </div>
           </div>
@@ -533,12 +458,21 @@
 
         <!-- Job 1: PhD Candidate UZH -->
         <div class="sub-card p-4 space-y-2.5">
-          <div class="flex justify-between items-start gap-2">
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work1Role">PhD Researcher & Teaching Assistant</h4>
-              <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">University of Zurich · Institute of Evolutionary Medicine</p>
+          <div class="flex gap-3.5 items-start">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Uni_Zuerich_Siegel.svg" 
+              alt="University of Zurich" 
+              class="w-10 h-10 rounded-full object-contain bg-white border border-sage-200 p-1 shadow-sm shrink-0 mt-0.5"
+            >
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-start gap-2">
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work1Role">PhD Researcher & Teaching Assistant</h4>
+                  <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">University of Zurich · Institute of Evolutionary Medicine</p>
+                </div>
+                <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 shrink-0" data-i18n="work1Period">Sept 2022 - Present</span>
+              </div>
             </div>
-            <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 shrink-0" data-i18n="work1Period">Sept 2022 - Present</span>
           </div>
 
           <p class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
@@ -553,46 +487,29 @@
           </ul>
 
           <div class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800">
-            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Bayesian Modeling</span>
-            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Oxytocin Hormonal Assays</span>
-            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Project Management</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagBayesian">Bayesian Modeling</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagOxytocin">Oxytocin Hormonal Assays</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagPm">Project Management</span>
           </div>
         </div>
 
-        <!-- Job 2: Master Research Fellow MNHN -->
+        <!-- Job 2: Master M2 Research Internship (6 Months - Université de Montpellier) -->
         <div class="sub-card p-4 space-y-2.5">
-          <div class="flex justify-between items-start gap-2">
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work2Role">Graduate Research Assistant (Master M2)</h4>
-              <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">Muséum National d'Histoire Naturelle (MNHN)</p>
+          <div class="flex gap-3.5 items-start">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/fr/archive/2/2d/20200919113018%21Logo_universit%C3%A9_montpellier.png" 
+              alt="Université de Montpellier" 
+              class="w-10 h-10 rounded-full object-contain bg-white border border-sage-200 p-1 shadow-sm shrink-0 mt-0.5"
+            >
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-start gap-2">
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work2Role">6-Month Research Intern (Master M2)</h4>
+                  <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5" data-i18n="work2Company">Institut des Sciences de l'Évolution (ISEM), Université de Montpellier</p>
+                </div>
+                <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 shrink-0" data-i18n="work2Period">January 2021 – June 2021</span>
+              </div>
             </div>
-            <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full shrink-0">2021 - 2022</span>
-          </div>
-
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
-            <i class="fa-solid fa-location-dot text-sage-600 text-[10px]"></i>
-            <span>Paris, France 🇫🇷</span>
-          </p>
-
-          <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside pt-1">
-            <li data-i18n="work2Task1">Conducted population genetics & dynamics analyses on ecological field datasets.</li>
-            <li data-i18n="work2Task2">Published M2 master thesis graded 16.01/20 (Highest Honours).</li>
-          </ul>
-
-          <div class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800">
-            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Population Dynamics</span>
-            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Statistical Computing</span>
-          </div>
-        </div>
-
-        <!-- Job 3: Research Intern Montpellier -->
-        <div class="sub-card p-4 space-y-2.5">
-          <div class="flex justify-between items-start gap-2">
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work3Role">Evolutionary Ecology Research Intern (M1)</h4>
-              <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">Université de Montpellier</p>
-            </div>
-            <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full shrink-0">2020 - 2021</span>
           </div>
 
           <p class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
@@ -600,9 +517,66 @@
             <span>Montpellier, France 🇫🇷</span>
           </p>
 
+          <div class="text-xs text-slate-700 dark:text-slate-300 font-medium italic pt-0.5" data-i18n="work2Proj">
+            Project: "Effects of chronic refined carbohydrate consumption on different components of attractiveness: face, body odour and voice"
+          </div>
+
           <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside pt-1">
-            <li data-i18n="work3Task1">Collected empirical field data and performed statistical hypothesis testing for evolutionary biology studies.</li>
+            <li data-i18n="work2Task1"><strong>Requirements Engineering & Protocol Design:</strong> Established a rigorous scientific protocol rooted in an extensive literature review, translating complex physiological variables into actionable requirements.</li>
+            <li data-i18n="work2Task2"><strong>Digital Prototyping & UX:</strong> Designed and custom-coded a dedicated web application from scratch to seamlessly capture high-fidelity behavioral data from users.</li>
+            <li data-i18n="work2Task3"><strong>Large-Scale Cohort Operations:</strong> Coordinated and managed data acquisition across a robust cohort of over 80 participants, ensuring compliance, data integrity, and quality control.</li>
+            <li data-i18n="work2Task4"><strong>Data Strategy & Quantitative Analytics:</strong> Processed, structured, and analyzed complex datasets using R, turning multi-modal behavioral and biological metrics into clear strategic insights.</li>
+            <li data-i18n="work2Task5"><strong>Strategic Reporting:</strong> Authored comprehensive analytical reports and critical discussions, communicating complex findings effectively to stakeholders.</li>
           </ul>
+
+          <div class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800">
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagReq">Requirements Engineering</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagWeb">Web App Prototyping</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagR">R Analytics</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagStrat">Data Strategy</span>
+          </div>
+        </div>
+
+        <!-- Job 3: Master M1 Research Internship (3 Months - ENS / Institut Jean Nicod) -->
+        <div class="sub-card p-4 space-y-2.5">
+          <div class="flex gap-3.5 items-start">
+            <img 
+              src="./ENS.png" 
+              onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/CharlotteCDebras/cv-charlotte/main/ENS.png';"
+              alt="ENS Paris" 
+              class="w-10 h-10 rounded-full object-contain bg-white border border-sage-200 p-1 shadow-sm shrink-0 mt-0.5"
+            >
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-start gap-2">
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="work3Role">3-Month Research Intern (Master M1)</h4>
+                  <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5" data-i18n="work3Company">Institut Jean Nicod, École Normale Supérieure (ENS)</p>
+                </div>
+                <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 shrink-0" data-i18n="work3Period">March – June 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
+            <i class="fa-solid fa-location-dot text-sage-600 text-[10px]"></i>
+            <span>Paris, France 🇫🇷</span>
+          </p>
+
+          <div class="text-xs text-slate-700 dark:text-slate-300 font-medium italic pt-0.5" data-i18n="work3Proj">
+            Project: "Modélisation des mécanismes de marché biologique chez le babouin de Guinée (Papio papio)"
+          </div>
+
+          <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside pt-1">
+            <li data-i18n="work3Task1"><strong>Object-Oriented Simulation Modeling:</strong> Designed and built a behavioral simulation model from scratch in Python under Object-Oriented Programming (OOP) principles to study partner choice and biological market theory.</li>
+            <li data-i18n="work3Task2"><strong>Autonomy & Self-Directed Learning:</strong> Demonstrated exceptional autonomy and self-directed technical mastery in Python (independently acquired during the internship), proactively anticipating modeling hurdles and architectural decisions.</li>
+            <li data-i18n="work3Task3"><strong>Extensive Literature Review:</strong> Conducted thorough bibliographic research to establish robust theoretical parameters, driving project progress efficiently and delivering preliminary results ahead of schedule.</li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1 pt-1 border-t border-slate-100 dark:border-slate-800">
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagPy">Python OOP</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagSim">Simulation Modeling</span>
+            <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="tagEco">Behavioral Ecology</span>
+          </div>
         </div>
       </section>
 
@@ -623,76 +597,96 @@
               <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
                 <span>Zurich, Switzerland 🇨🇭</span>
                 <span>•</span>
-                <span>Sept 2022 - Present</span>
+                <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">Sept 2022 - Present</span>
               </div>
             </div>
           </div>
           <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-1.5">
             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider" data-i18n="courseworkLabel">Relevant Coursework</p>
             <div class="flex flex-wrap gap-1">
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Behavioural economics</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Decision-making neuroscience</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Behavioural endocrinology</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Bayesian statistical modelling</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Leadership</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Project management</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC1">Behavioural economics</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC2">Decision-making neuroscience</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC3">Behavioural endocrinology</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC4">Bayesian statistical modelling</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC5">Leadership</span>
+              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="phdC6">Project management</span>
             </div>
           </div>
         </div>
 
-        <!-- Master MNHN -->
-        <div class="sub-card p-4 space-y-2">
-          <div class="flex gap-3.5 items-start">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/e/e7/MNHN-logo.jpg" 
-              alt="MNHN" 
-              class="w-12 h-12 rounded-full object-cover border-2 border-sage-200 shadow-sm shrink-0"
-            >
-            <div class="flex-1 min-w-0">
-              <h3 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Muséum National d’Histoire Naturelle</h3>
-              <p class="text-xs font-semibold text-sage-600 dark:text-sage-200 mt-0.5">Master EEVEF (M2) - 60 ECTS</p>
-              <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
-                <span>Paris, France 🇫🇷</span>
-                <span>•</span>
-                <span>2021 - 2022</span>
-              </div>
+        <!-- REGROUPED MASTER DEGREE -->
+        <div class="sub-card p-4 space-y-3.5">
+          <div class="flex justify-between items-start gap-2 border-b border-slate-100 dark:border-slate-800 pb-2.5">
+            <div>
+              <h3 class="font-extrabold text-slate-900 dark:text-white text-xs leading-snug" data-i18n="masterTitle">Master Degree in Biology, Ecology, Evolution</h3>
+              <p class="text-xs font-semibold text-sage-600 dark:text-sage-200 mt-0.5">120 ECTS</p>
+              <p class="text-xs font-bold text-sage-600 dark:text-sage-200 mt-1" data-i18n="masterOverallGrade">Grade: 16.01/20 — Highest Honours (GPA: 4.0)</p>
             </div>
+            <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 shrink-0">2020 - 2022</span>
           </div>
-          <div class="text-xs text-sage-600 dark:text-sage-200 font-medium pt-1" data-i18n="mnhnGrade">
-            Grade: 16.01/20 — Highest Honours (GPA: 4.0)
-          </div>
-          <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-1.5">
-            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider" data-i18n="courseworkLabel">Relevant Coursework</p>
-            <div class="flex flex-wrap gap-1">
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Statistical modelling</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Population genetics</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Behavioural ecology</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Population dynamics</span>
-              <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium">Ecosystem ecology</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Master M1 Montpellier -->
-        <div class="sub-card p-4 space-y-2">
-          <div class="flex gap-3.5 items-start">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/fr/archive/2/2d/20200919113018%21Logo_universit%C3%A9_montpellier.png" 
-              alt="Université de Montpellier" 
-              class="w-12 h-12 rounded-full object-contain bg-white border-2 border-sage-200 p-1 shadow-sm shrink-0"
-            >
-            <div class="flex-1 min-w-0">
-              <h3 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Université de Montpellier</h3>
-              <p class="text-xs font-semibold text-sage-600 dark:text-sage-200 mt-0.5">Master Darwin (M1) - 60 ECTS</p>
-              <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
-                <span>Montpellier, France 🇫🇷</span>
-                <span>•</span>
-                <span>2020 - 2021</span>
+          <!-- Master (Year 2) -->
+          <div class="space-y-1.5">
+            <div class="flex gap-3 items-start">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/MNHN-logo.jpg" 
+                alt="MNHN" 
+                class="w-9 h-9 rounded-full object-cover border border-sage-200 shadow-sm shrink-0 mt-0.5"
+              >
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Muséum National d’Histoire Naturelle</h4>
+                    <p class="text-[11px] font-semibold text-sage-600 dark:text-sage-200 mt-0.5" data-i18n="m2Degree">Master EEVEF — Master (Year 2) — 60 ECTS</p>
+                  </div>
+                  <span class="text-[10px] font-medium text-slate-400 shrink-0">2021 - 2022</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Paris, France 🇫🇷</p>
+              </div>
+            </div>
+
+            <div class="pt-1.5 space-y-1 pl-12">
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider" data-i18n="courseworkLabel">Relevant Coursework</p>
+              <div class="flex flex-wrap gap-1">
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="m2C1">Statistical modelling</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="m2C2">Population genetics</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="m2C3">Behavioural ecology</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="m2C4">Population dynamics</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="m2C5">Ecosystem ecology</span>
               </div>
             </div>
           </div>
-          <div class="text-xs text-sage-600 dark:text-sage-200 font-medium pt-1" data-i18n="m1Grade">
-            Grade: 16.01/20 — Highest Honours (GPA: 4.0)
+
+          <div class="border-t border-slate-100 dark:border-slate-800/80 my-2"></div>
+
+          <!-- Master (Year 1) -->
+          <div class="space-y-1.5">
+            <div class="flex gap-3 items-start">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/fr/archive/2/2d/20200919113018%21Logo_universit%C3%A9_montpellier.png" 
+                alt="Université de Montpellier" 
+                class="w-9 h-9 rounded-full object-contain bg-white border border-sage-200 p-1 shadow-sm shrink-0 mt-0.5"
+              >
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start gap-2">
+                  <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Université de Montpellier</h4>
+                    <p class="text-[11px] font-semibold text-sage-600 dark:text-sage-200 mt-0.5" data-i18n="m1Degree">Master Darwin — Master (Year 1) — 60 ECTS</p>
+                  </div>
+                  <span class="text-[10px] font-medium text-slate-400 shrink-0">2020 - 2021</span>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Montpellier, France 🇫🇷</p>
+              </div>
+            </div>
+
+            <div class="pt-1.5 space-y-1 pl-12">
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider" data-i18n="courseworkLabel">Relevant Coursework</p>
+              <div class="flex flex-wrap gap-1">
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="courseM1_1">Advanced Biological Data Processing</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="courseM1_2">Numerical Ecology</span>
+                <span class="bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 text-[10px] px-2 py-0.5 rounded-md font-medium" data-i18n="courseM1_3">Genetics & Genomics</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -706,11 +700,11 @@
             >
             <div class="flex-1 min-w-0">
               <h3 class="font-bold text-slate-900 dark:text-white text-xs leading-snug">Université de Montpellier</h3>
-              <p class="text-xs font-semibold text-sage-600 dark:text-sage-200 mt-0.5">Licence Biologie Ecologie Evolution - 180 ECTS</p>
+              <p class="text-xs font-semibold text-sage-600 dark:text-sage-200 mt-0.5" data-i18n="licenceTitle">Bachelor of Science in Life Sciences — 180 ECTS</p>
               <div class="flex items-center gap-2 text-[11px] text-slate-400 mt-1">
                 <span>Montpellier, France 🇫🇷</span>
                 <span>•</span>
-                <span>2017 - 2020</span>
+                <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">2017 - 2020</span>
               </div>
             </div>
           </div>
@@ -727,46 +721,43 @@
           </h3>
 
           <div class="sub-card p-2 divide-y divide-slate-100 dark:divide-slate-800">
-            <!-- Salesforce -->
             <div class="p-2.5 flex items-center justify-between gap-3">
               <div class="flex items-center gap-3 min-w-0">
                 <div class="w-10 h-10 rounded-full bg-white border border-slate-200 dark:border-slate-700 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" class="w-full h-full object-contain">
                 </div>
                 <div class="min-w-0">
-                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate">Salesforce Sales Operations</h4>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate" data-i18n="cert1Title">Salesforce Sales Operations</h4>
                   <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">Salesforce</p>
                 </div>
               </div>
-              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0">Certified</span>
+              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0" data-i18n="certStatus">Certified</span>
             </div>
 
-            <!-- Microsoft -->
             <div class="p-2.5 flex items-center justify-between gap-3">
               <div class="flex items-center gap-3 min-w-0">
                 <div class="w-10 h-10 rounded-full bg-white border border-slate-200 dark:border-slate-700 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="w-full h-full object-contain">
                 </div>
                 <div class="min-w-0">
-                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate">Microsoft Power BI Data Analyst</h4>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate" data-i18n="cert2Title">Microsoft Power BI Data Analyst</h4>
                   <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">Microsoft</p>
                 </div>
               </div>
-              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0">Certified</span>
+              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0" data-i18n="certStatus">Certified</span>
             </div>
 
-            <!-- IBM -->
             <div class="p-2.5 flex items-center justify-between gap-3">
               <div class="flex items-center gap-3 min-w-0">
                 <div class="w-10 h-10 rounded-full bg-white border border-slate-200 dark:border-slate-700 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="w-full h-full object-contain">
                 </div>
                 <div class="min-w-0">
-                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate">IBM Financial Analysis and Modeling</h4>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-xs leading-snug truncate" data-i18n="cert3Title">IBM Financial Analysis and Modeling</h4>
                   <p class="text-[11px] text-sage-600 dark:text-sage-200 font-semibold mt-0.5">IBM</p>
                 </div>
               </div>
-              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0">Certified</span>
+              <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 dark:text-sage-200 px-2.5 py-0.5 rounded-full shrink-0" data-i18n="certStatus">Certified</span>
             </div>
           </div>
         </div>
@@ -781,16 +772,15 @@
             <span>Publications & Papers</span>
           </h3>
 
-          <!-- Paper 1 -->
           <div class="sub-card p-4 space-y-2">
             <div class="flex justify-between items-start gap-2">
               <span class="text-xs font-bold text-sage-600 dark:text-sage-200">Debras et al. (2026)</span>
-              <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-200">Published</span>
+              <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-200" data-i18n="pubStatus">Published</span>
             </div>
-            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug" data-i18n="pub1Title">
               Us Against Them: Oxytocin Response to Competition
             </h4>
-            <p class="text-[11px] text-slate-500 italic">May 2026 — Proceedings of the Royal Society B</p>
+            <p class="text-[11px] text-slate-500 italic" data-i18n="pub1Sub">May 2026 — Proceedings of the Royal Society B</p>
             
             <div class="flex flex-wrap items-center gap-2 pt-1">
               <a 
@@ -802,39 +792,20 @@
                 <span data-i18n="readPaper">Read Article</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
               </a>
-
-              <button 
-                onclick="explainPaperWithGemini('Us Against Them: Oxytocin Response to Competition')"
-                class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 hover:bg-emerald-100 transition"
-              >
-                <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
-                <span data-i18n="aiExplainBtn">✨ Plain Language AI Explanation</span>
-              </button>
-            </div>
-
-            <!-- AI Summary Box -->
-            <div id="paper-explanation-box" class="hidden mt-2 p-3 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs text-slate-700 dark:text-slate-200 space-y-1">
-              <p class="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
-                <i class="fa-solid fa-brain"></i>
-                <span data-i18n="aiExplainTitle">Gemini Plain Language Breakdown</span>
-              </p>
-              <div id="paper-explanation-text" class="text-[11px] leading-relaxed italic">Generating summary...</div>
             </div>
           </div>
 
-          <!-- Paper 2 -->
           <div class="sub-card p-4 space-y-2">
             <div class="flex justify-between items-start gap-2">
               <span class="text-xs font-bold text-sage-600 dark:text-sage-200">Debras et al.</span>
               <span class="text-[10px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 px-2 py-0.5 rounded-full border border-amber-200" data-i18n="inPrep">In Preparation</span>
             </div>
-            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug" data-i18n="pub2Title">
               Beyond Familiar Bonds: Social Distance Elevates Oxytocin Levels in a Human Small-Scale Society
             </h4>
           </div>
         </div>
 
-        <!-- Press -->
         <div class="space-y-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800">
           <h3 class="text-xs font-bold uppercase tracking-wider text-sage-600 dark:text-sage-200 flex items-center gap-2" data-i18n="pressTitle">
             <i class="fa-solid fa-newspaper"></i>
@@ -846,7 +817,7 @@
               <span class="font-bold text-sage-600 dark:text-sage-200">University of Zurich News (UZH)</span>
               <span>2026</span>
             </div>
-            <h4 class="text-xs font-bold text-slate-900 dark:text-white">Oxytocin response to group competition</h4>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-i18n="pressTitleItem">Oxytocin response to group competition</h4>
             <a 
               href="https://www.news.uzh.ch/en/articles/media/2026/oxytocin-group-competition.html" 
               target="_blank" 
@@ -859,7 +830,6 @@
           </div>
         </div>
 
-        <!-- Conferences -->
         <div class="space-y-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800">
           <h3 class="text-xs font-bold uppercase tracking-wider text-sage-600 dark:text-sage-200 flex items-center gap-2" data-i18n="confTitle">
             <i class="fa-solid fa-microphone"></i>
@@ -873,7 +843,7 @@
                 <p class="text-[11px] text-slate-500">Denver, USA 🇺🇸</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full">Talk</span>
+                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full" data-i18n="confTalk">Talk</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2026</span>
               </div>
             </div>
@@ -884,7 +854,7 @@
                 <p class="text-[11px] text-slate-500">Montpellier, France 🇫🇷</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full">Talk</span>
+                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full" data-i18n="confTalk">Talk</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2024</span>
               </div>
             </div>
@@ -895,7 +865,7 @@
                 <p class="text-[11px] text-slate-500">Lausanne, Switzerland 🇨🇭</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800 px-2.5 py-0.5 rounded-full">Poster</span>
+                <span class="text-[10px] font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800 px-2.5 py-0.5 rounded-full" data-i18n="confPoster">Poster</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2024</span>
               </div>
             </div>
@@ -906,7 +876,7 @@
                 <p class="text-[11px] text-slate-500">Lausanne, Switzerland 🇨🇭</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full">Talk</span>
+                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full" data-i18n="confTalk">Talk</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2024</span>
               </div>
             </div>
@@ -917,7 +887,7 @@
                 <p class="text-[11px] text-slate-500">Zurich, Switzerland 🇨🇭</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800 px-2.5 py-0.5 rounded-full">Poster</span>
+                <span class="text-[10px] font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800 px-2.5 py-0.5 rounded-full" data-i18n="confPoster">Poster</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2024</span>
               </div>
             </div>
@@ -928,7 +898,7 @@
                 <p class="text-[11px] text-slate-500">Paris, France 🇫🇷</p>
               </div>
               <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full">Talk</span>
+                <span class="text-[10px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 rounded-full" data-i18n="confTalk">Talk</span>
                 <span class="text-[10px] font-semibold bg-sage-100 dark:bg-slate-800 text-sage-600 px-2 py-0.5 rounded-full">2023</span>
               </div>
             </div>
@@ -939,87 +909,8 @@
     </div>
   </main>
 
-  <!-- GEMINI AI RESEARCH COMPANION FLOATING BUTTON & MODAL -->
-  <div class="fixed bottom-4 right-4 z-50">
-    <button 
-      onclick="toggleAiModal()" 
-      class="flex items-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-emerald-600 to-sage-600 text-white shadow-xl hover:scale-105 transition transform active:scale-95 border border-white/20"
-      title="Ask Charlotte's AI Research Assistant"
-    >
-      <i class="fa-solid fa-wand-magic-sparkles text-sm animate-pulse"></i>
-      <span class="text-xs font-bold" data-i18n="aiCompanionBtn">Ask Research AI</span>
-    </button>
-  </div>
-
-  <!-- AI MODAL DIALOG -->
-  <div id="ai-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md transition-opacity">
-    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-lg rounded-3xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
-      
-      <!-- Modal Header -->
-      <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-sage-50/50 dark:bg-slate-800/50">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs shadow-sm">
-            <i class="fa-solid fa-robot"></i>
-          </div>
-          <div>
-            <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-i18n="aiModalTitle">Charlotte's AI Research Companion</h3>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="aiModalSub">Powered by Gemini 3.1 Flash</p>
-          </div>
-        </div>
-        <button onclick="toggleAiModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1.5 text-xs rounded-full transition">
-          <i class="fa-solid fa-xmark text-sm"></i>
-        </button>
-      </div>
-
-      <!-- Quick Suggestion Chips -->
-      <div class="px-4 py-2.5 bg-slate-50 dark:bg-slate-800/30 border-b border-slate-100 dark:border-slate-800 flex flex-wrap gap-1.5">
-        <button onclick="askAiPreset(1)" class="text-[10px] px-2.5 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
-          🎓 PhD Research Focus
-        </button>
-        <button onclick="askAiPreset(2)" class="text-[10px] px-2.5 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
-          🧪 Oxytocin & Competition
-        </button>
-        <button onclick="askAiPreset(3)" class="text-[10px] px-2.5 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
-          📊 Bayesian Statistics
-        </button>
-        <button onclick="askAiPreset(4)" class="text-[10px] px-2.5 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
-          💼 Postdoc Recruiter Summary
-        </button>
-      </div>
-
-      <!-- Chat History Stream -->
-      <div id="ai-chat-history" class="p-4 space-y-3 flex-1 overflow-y-auto text-xs min-h-[220px]">
-        <div class="bg-emerald-50 dark:bg-emerald-950/40 text-slate-700 dark:text-slate-200 p-3 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 leading-relaxed">
-          👋 <span data-i18n="aiGreeting">Hello! I'm Charlotte's academic AI assistant. Ask me anything about her research at UZH, publications, Bayesian modelling skills, or background.</span>
-        </div>
-      </div>
-
-      <!-- Chat Input Area -->
-      <div class="p-3 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center gap-2">
-        <input 
-          id="ai-user-input" 
-          type="text" 
-          placeholder="Ask a question about Charlotte..." 
-          data-i18n-placeholder="aiInputPlaceholder"
-          class="flex-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3.5 py-2 rounded-full text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-emerald-500 transition"
-          onkeydown="if(event.key === 'Enter') sendAiMessage()"
-        >
-        <button 
-          onclick="sendAiMessage()" 
-          class="p-2.5 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition flex items-center justify-center shrink-0 w-8 h-8"
-        >
-          <i class="fa-solid fa-paper-plane text-xs"></i>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- JAVASCRIPT ENGINE -->
+  <!-- JAVASCRIPT ENGINE WITH FULL BILINGUAL DICTIONARY -->
   <script>
-    // -------------------------------------------------------------
-    // 1. DYNAMIC PARTICLE CONSTELLATION CANVAS
-    // -------------------------------------------------------------
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
 
@@ -1106,9 +997,6 @@
     resizeCanvas();
     renderEngine();
 
-    // -------------------------------------------------------------
-    // 2. THEME & TABS CONTROLLER
-    // -------------------------------------------------------------
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
@@ -1135,9 +1023,6 @@
       }
     }
 
-    // -------------------------------------------------------------
-    // 3. TRANSLATION SYSTEM (EN / FR)
-    // -------------------------------------------------------------
     let currentLang = 'EN';
     const langBtn = document.getElementById('lang-toggle');
     const langLabel = document.getElementById('lang-label');
@@ -1147,8 +1032,6 @@
         heroRole: "PhD Candidate in Evolutionary Biology",
         heroLocation: "Zurich, Switzerland 🇨🇭 (Swiss B permit)",
         contactBtn: "Contact",
-        audioOverviewBtn: "Listen AI Overview",
-        aiAskBtn: "Ask AI",
         tabAbout: "About me",
         tabWork: "Work Experience",
         tabEdu: "Education",
@@ -1157,68 +1040,108 @@
         profileText: "Proactive researcher with a strong background in evolutionary biology and data analysis, actively transitioning into the business sector. Seeking a professional opportunity starting in November 2026. Driven by a data-first mindset and analytical problem-solving, with a passion for taking on new challenges and collaborating effectively with cross-functional stakeholders.",
         workTitle: "Academic & Research Positions",
         volunteeringTitle: "Volunteering",
+        
         work1Role: "PhD Researcher & Teaching Assistant",
         work1Period: "Sept 2022 - Present",
         work1Task1: "Designed & led empirical research on human social endocrinology (oxytocin) during group competition.",
         work1Task2: "Applied Bayesian statistical modeling in R to analyze complex endocrinological and behavioral datasets.",
         work1Task3: "Supervised undergraduate projects and taught coursework in Evolutionary Biology & Biostatistics.",
-        work2Role: "Graduate Research Assistant (Master M2)",
-        work2Task1: "Conducted population genetics & dynamics analyses on ecological field datasets.",
-        work2Task2: "Published M2 master thesis graded 16.01/20 (Highest Honours).",
-        work3Role: "Evolutionary Ecology Research Intern (M1)",
-        work3Task1: "Collected empirical field data and performed statistical hypothesis testing for evolutionary biology studies.",
-        phdDegree: "PhD in Evolutionary Biology",
-        courseworkLabel: "Relevant Coursework",
-        mnhnGrade: "Grade: 16.01/20 — Highest Honours (GPA: 4.0)",
-        m1Grade: "Grade: 16.01/20 — Highest Honours (GPA: 4.0)",
-        licenceGrade: "Grade: 15/20 — Highest Honours (GPA: 3.5)",
-        papersTitle: "Publications & Papers",
-        readPaper: "Read Article",
-        aiExplainBtn: "✨ Plain Language AI Explanation",
-        aiExplainTitle: "Gemini Plain Language Breakdown",
-        inPrep: "In Preparation",
-        pressTitle: "Media & Press",
-        readPress: "Read Coverage",
-        confTitle: "Conferences & Presentations",
-        certTitle: "Certifications",
-        skillsTitle: "SKILLS",
-        hardSkills: "HARD SKILLS",
-        softSkills: "SOFT SKILLS",
-        toolsLabel: "TOOLS",
-        methodsLabel: "METHODS",
-        comm1: "Cross-Cultural Communication",
-        comm2: "Scientific Storytelling",
-        comm3: "Teaching & Supervision",
-        mind1: "Analytical Thinking",
-        mind2: "Problem Solving",
-        mind3: "Project Management",
-        mind4: "Efficiency Optimization",
-        mind5: "Adaptability",
-        contactTitle: "Contact & Personal Info",
-        license: "Driving licence (B)",
-        citizenship: "French (EU citizen)",
-        langTitle: "Languages",
-        native: "Native",
-        interestsTitle: "INTERESTS & HOBBIES",
+        tagBayesian: "Bayesian Modeling",
+        tagOxytocin: "Oxytocin Hormonal Assays",
+        tagPm: "Project Management",
+        
+        work2Role: "6-Month Research Intern (Master M2)",
+        work2Company: "Institut des Sciences de l'Évolution (ISEM), Université de Montpellier",
+        work2Period: "January 2021 – June 2021",
+        work2Proj: 'Project: "Effects of chronic refined carbohydrate consumption on different components of attractiveness: face, body odour and voice"',
+        work2Task1: "Requirements Engineering & Protocol Design: Established a rigorous scientific protocol rooted in an extensive literature review, translating complex physiological variables into actionable requirements.",
+        work2Task2: "Digital Prototyping & UX: Designed and custom-coded a dedicated web application from scratch to seamlessly capture high-fidelity behavioral data from users.",
+        work2Task3: "Large-Scale Cohort Operations: Coordinated and managed data acquisition across a robust cohort of over 80 participants, ensuring compliance, data integrity, and quality control.",
+        work2Task4: "Data Strategy & Quantitative Analytics: Processed, structured, and analyzed complex datasets using R, turning multi-modal behavioral and biological metrics into clear strategic insights.",
+        work2Task5: "Strategic Reporting: Authored comprehensive analytical reports and critical discussions, communicating complex findings effectively to stakeholders.",
+        tagReq: "Requirements Engineering",
+        tagWeb: "Web App Prototyping",
+        tagR: "R Analytics",
+        tagStrat: "Data Strategy",
+
+        work3Role: "3-Month Research Intern (Master M1)",
+        work3Company: "Institut Jean Nicod, École Normale Supérieure (ENS)",
+        work3Period: "March – June 2021",
+        work3Proj: 'Project: "Modélisation des mécanismes de marché biologique chez le babouin de Guinée (Papio papio)"',
+        work3Task1: "Object-Oriented Simulation Modeling: Designed and built a behavioral simulation model from scratch in Python under Object-Oriented Programming (OOP) principles to study partner choice and biological market theory.",
+        work3Task2: "Autonomy & Self-Directed Learning: Demonstrated exceptional autonomy and self-directed technical mastery in Python (independently acquired during the internship), proactively anticipating modeling hurdles and architectural decisions.",
+        work3Task3: "Extensive Literature Review: Conducted thorough bibliographic research to establish robust theoretical parameters, driving project progress efficiently and delivering preliminary results ahead of schedule.",
+        tagPy: "Python OOP",
+        tagSim: "Simulation Modeling",
+        tagEco: "Behavioral Ecology",
+
+        voltRole: "Wildlife Rehabilitation Volunteer",
+        voltTask1: "Spearheaded veterinary-supervised rehabilitation for endangered Amazonian fauna (Ateles chamek, Panthera onca, Leopardus pardalis, Cebus apella).",
+        voltTask2: "Executed parasitological diagnostics and implemented behavioral enrichment programs to advance hands-on biodiversity conservation.",
+        badgeBio: "Biodiversity Conservation",
+        badgeWild: "Wildlife Rehabilitation",
+        badgeField: "Field Operations",
+
         sportsTitle: "SPORTS",
+        golfItem: "Golf (competition)",
         adventureTitle: "ADVENTURE",
-        artsTitle: "ARTS",
         advItem1: "Solo backpacking for 3 months (2016)",
         advItem2: "Travelled in +30 countries",
         advItem3: "Passionate about discovering new cultures",
+        artsTitle: "ARTS",
+        artPhoto: "Photography",
+        artFilm: "Filmmaking",
+        artDesign: "Aesthetic design conception",
         musicItem: "Music lover: playlist for everything",
-        aiCompanionBtn: "Ask Research AI",
-        aiModalTitle: "Charlotte's AI Research Companion",
-        aiModalSub: "Powered by Gemini 3.1 Flash",
-        aiGreeting: "Hello! I'm Charlotte's academic AI assistant. Ask me anything about her research at UZH, publications, Bayesian modelling skills, or background.",
-        aiInputPlaceholder: "Ask a question about Charlotte..."
+
+        phdDegree: "PhD in Evolutionary Biology",
+        phdC1: "Behavioural economics",
+        phdC2: "Decision-making neuroscience",
+        phdC3: "Behavioural endocrinology",
+        phdC4: "Bayesian statistical modelling",
+        phdC5: "Leadership",
+        phdC6: "Project management",
+
+        masterTitle: "Master Degree in Biology, Ecology, Evolution",
+        masterOverallGrade: "Grade: 16.01/20 — Highest Honours (GPA: 4.0)",
+        m2Degree: "Master EEVEF — Master (Year 2) — 60 ECTS",
+        m1Degree: "Master Darwin — Master (Year 1) — 60 ECTS",
+        courseworkLabel: "Relevant Coursework",
+        m2C1: "Statistical modelling",
+        m2C2: "Population genetics",
+        m2C3: "Behavioural ecology",
+        m2C4: "Population dynamics",
+        m2C5: "Ecosystem ecology",
+        courseM1_1: "Advanced Biological Data Processing",
+        courseM1_2: "Numerical Ecology",
+        courseM1_3: "Genetics & Genomics",
+
+        licenceTitle: "Bachelor of Science in Life Sciences — 180 ECTS",
+        licenceGrade: "Grade: 15/20 — Highest Honours (GPA: 3.5)",
+        certTitle: "Certifications",
+        cert1Title: "Salesforce Sales Operations",
+        cert2Title: "Microsoft Power BI Data Analyst",
+        cert3Title: "IBM Financial Analysis and Modeling",
+        certStatus: "Certified",
+
+        papersTitle: "Publications & Papers",
+        pubStatus: "Published",
+        pub1Title: "Us Against Them: Oxytocin Response to Competition",
+        pub1Sub: "May 2026 — Proceedings of the Royal Society B",
+        readPaper: "Read Article",
+        inPrep: "In Preparation",
+        pub2Title: "Beyond Familiar Bonds: Social Distance Elevates Oxytocin Levels in a Human Small-Scale Society",
+        pressTitle: "Media & Press",
+        pressTitleItem: "Oxytocin response to group competition",
+        readPress: "Read Coverage",
+        confTitle: "Conferences & Presentations",
+        confTalk: "Talk",
+        confPoster: "Poster"
       },
       FR: {
         heroRole: "Doctorante en Biologie Évolutive",
         heroLocation: "Zurich, Suisse 🇨🇭 (Permis B Suisse)",
         contactBtn: "Contacter",
-        audioOverviewBtn: "Écouter le résumé IA",
-        aiAskBtn: "Questionner l'IA",
         tabAbout: "À propos de moi",
         tabWork: "Expérience pro",
         tabEdu: "Formation",
@@ -1227,61 +1150,103 @@
         profileText: "Chercheuse proactive bénéficiant d'une solide expérience en biologie évolutive et analyse de données, en transition active vers le secteur privé/business. À la recherche d'une opportunité professionnelle à partir de novembre 2026. Animée par une approche axée sur la donnée et la résolution analytique de problèmes, passionnée par les nouveaux défis et la collaboration efficace avec des parties prenantes transversales.",
         workTitle: "Postes de Recherche & Académiques",
         volunteeringTitle: "Bénévolat",
+        
         work1Role: "Doctorante Chercheuse & Assistant d'Enseignement",
         work1Period: "Sept 2022 - Présent",
         work1Task1: "Conception et direction d'expériences sur l'endocrinologie sociale (ocytocine) lors de compétitions de groupe.",
         work1Task2: "Application de la modélisation statistique bayésienne sous R pour analyser des jeux de données complexes.",
         work1Task3: "Encadrement d'étudiants de licence/master et enseignement en biologie évolutive & biostatistiques.",
-        work2Role: "Assistant de Recherche (Master M2)",
-        work2Task1: "Analyses de génétique des populations et de dynamique comportementale sur le terrain.",
-        work2Task2: "Mémoire de M2 soutenu avec une note de 16.01/20 (Mention Très Bien).",
-        work3Role: "Stagiaire de Recherche en Écologie Évolutive (M1)",
-        work3Task1: "Collecte de données empiriques de terrain et tests d'hypothèses statistiques.",
-        phdDegree: "Doctorat en Biologie Évolutive",
-        courseworkLabel: "Cours Pertinents",
-        mnhnGrade: "Note : 16.01/20 — Mention Très Bien (GPA : 4.0)",
-        m1Grade: "Note : 16.01/20 — Mention Très Bien (GPA : 4.0)",
-        licenceGrade: "Note : 15/20 — Mention Très Bien (GPA : 3.5)",
-        papersTitle: "Publications & Articles",
-        readPaper: "Consulter l'article",
-        aiExplainBtn: "✨ Explication Vulgarisée par l'IA",
-        aiExplainTitle: "Synthèse Vulgarisée Gemini",
-        inPrep: "En Préparation",
-        pressTitle: "Presse & Médias",
-        readPress: "Lire l'article de presse",
-        confTitle: "Conférences & Présentations",
-        certTitle: "Certifications",
-        skillsTitle: "COMPÉTENCES",
-        hardSkills: "COMPÉTENCES TECHNIQUES",
-        softSkills: "COMPÉTENCES RELATIONNELLES",
-        toolsLabel: "OUTILS",
-        methodsLabel: "MÉTHODES",
-        comm1: "Communication interculturelle",
-        comm2: "Vulgarisation & Storytelling",
-        comm3: "Enseignement & Encadrement",
-        mind1: "Esprit d'analyse",
-        mind2: "Résolution de problèmes",
-        mind3: "Gestion de projet",
-        mind4: "Optimisation de l'efficacité",
-        mind5: "Adaptabilité",
-        contactTitle: "Coordonnées & Informations",
-        license: "Permis de conduire (B)",
-        citizenship: "Française (Citoyenne UE)",
-        langTitle: "Langues",
-        native: "Natif",
-        interestsTitle: "CENTRES D'INTÉRÊT & LOISIRS",
+        tagBayesian: "Modélisation Bayésienne",
+        tagOxytocin: "Dosages hormonaux d'ocytocine",
+        tagPm: "Gestion de Projet",
+        
+        work2Role: "Stagiaire de Recherche 6 mois (Master M2)",
+        work2Company: "Institut des Sciences de l'Évolution (ISEM), Université de Montpellier",
+        work2Period: "Janvier 2021 – Juin 2021",
+        work2Proj: 'Projet : "Effets de la consommation chronique de glucides raffinés sur l\'attractivité : visage, odeur corporelle et voix"',
+        work2Task1: "Ingénierie des exigences & Conception de protocole : Établissement d'un protocole scientifique rigoureux basé sur une étude approfondie de la bibliographie, traduisant des variables physiologiques complexes en exigences opérationnelles.",
+        work2Task2: "Prototypage numérique & UX : Conception et développement intégral d'un site web sur-mesure pour collecter de manière fluide des données comportementales auprès des utilisateurs.",
+        work2Task3: "Gestion de cohorte à grande échelle : Coordination et gestion de la collecte de données biologiques et comportementales sur une cohorte de +80 personnes, garantissant la conformité et le contrôle qualité.",
+        work2Task4: "Stratégie de données & Analyse quantitative : Traitement, structuration et analyse statistique des données sous R, transformant des métriques multi-modales en enseignements stratégiques clairs.",
+        work2Task5: "Reporting stratégique : Rédaction d'un rapport d'analyse synthétique et d'une discussion critique des résultats à destination des parties prenantes.",
+        tagReq: "Ingénierie des exigences",
+        tagWeb: "Prototypage d'application web",
+        tagR: "Analyses R",
+        tagStrat: "Stratégie de données",
+
+        work3Role: "Stagiaire de Recherche 3 mois (Master M1)",
+        work3Company: "Institut Jean Nicod, École Normale Supérieure (ENS)",
+        work3Period: "Mars – Juin 2021",
+        work3Proj: 'Projet : "Modélisation des mécanismes de marché biologique chez le babouin de Guinée (Papio papio)"',
+        work3Task1: "Modélisation de simulation orientée objet : Conception et construction de A à Z d'un modèle de simulation du comportement social en Python selon les principes de la programmation orientée objet (POO).",
+        work3Task2: "Autonomie & Auto-formation : Preuve d'une très grande autonomie et maîtrise technique en Python (langage appris en auto-didacte durant le stage), anticipant proactivement les défis d'architecture du modèle.",
+        work3Task3: "Recherche bibliographique approfondie : Réalisation d'une revue de littérature extensive pour définir des paramètres théoriques solides, permettant d'obtenir des résultats préliminaires en avance sur le planning.",
+        tagPy: "Python POO",
+        tagSim: "Modélisation de simulation",
+        tagEco: "Écologie comportementale",
+
+        voltRole: "Bénévole en Réhabilitation de la Faune Sauvage",
+        voltTask1: "Direction de la réhabilitation sous supervision vétérinaire de faune amazonienne menacée (Ateles chamek, Panthera onca, Leopardus pardalis, Cebus apella).",
+        voltTask2: "Exécution de diagnostics parasitologiques et mise en place de programmes d'enrichissement comportemental pour la conservation de la biodiversité.",
+        badgeBio: "Conservation de la biodiversité",
+        badgeWild: "Réhabilitation de la faune",
+        badgeField: "Opérations de terrain",
+
         sportsTitle: "SPORTS",
+        golfItem: "Golf (compétition)",
         adventureTitle: "AVENTURES",
-        artsTitle: "ARTS",
         advItem1: "Voyage solo en sac à dos pendant 3 mois (2016)",
         advItem2: "Plus de 30 pays visités",
         advItem3: "Passionnée par la découverte de nouvelles cultures",
+        artsTitle: "ARTS",
+        artPhoto: "Photographie",
+        artFilm: "Réalisation de films",
+        artDesign: "Conception de design esthétique",
         musicItem: "Passionnée de musique : une playlist pour tout",
-        aiCompanionBtn: "Questionner l'IA",
-        aiModalTitle: "Assistant IA de Recherche - Charlotte",
-        aiModalSub: "Alimenté par Gemini 3.1 Flash",
-        aiGreeting: "Bonjour ! Je suis l'assistant IA académique de Charlotte. Posez-moi vos questions sur son doctorat à l'UZH, ses travaux sur l'ocytocine ou ses compétences en modélisation.",
-        aiInputPlaceholder: "Posez une question sur le parcours de Charlotte..."
+
+        phdDegree: "Doctorat en Biologie Évolutive",
+        phdC1: "Économie comportementale",
+        phdC2: "Neurosciences de la prise de décision",
+        phdC3: "Endocrinologie comportementale",
+        phdC4: "Modélisation statistique bayésienne",
+        phdC5: "Leadership",
+        phdC6: "Gestion de projet",
+
+        masterTitle: "Master en Biologie, Écologie, Évolution",
+        masterOverallGrade: "Note globale : 16.01/20 — Mention Très Bien (GPA : 4.0)",
+        m2Degree: "Master EEVEF — Master (2ème année) — 60 ECTS",
+        m1Degree: "Master Darwin — Master (1ère année) — 60 ECTS",
+        courseworkLabel: "Cours Pertinents",
+        m2C1: "Modélisation statistique",
+        m2C2: "Génétique des populations",
+        m2C3: "Écologie comportementale",
+        m2C4: "Dynamique des populations",
+        m2C5: "Écologie des écosystèmes",
+        courseM1_1: "Traitement avancé des données biologiques",
+        courseM1_2: "Écologie numérique",
+        courseM1_3: "Génétique et Génomique",
+
+        licenceTitle: "Licence de Biologie Écologie Évolution — 180 ECTS",
+        licenceGrade: "Note : 15/20 — Mention Très Bien (GPA : 3.5)",
+        certTitle: "Certifications",
+        cert1Title: "Salesforce Sales Operations",
+        cert2Title: "Microsoft Power BI Data Analyst",
+        cert3Title: "IBM Financial Analysis and Modeling",
+        certStatus: "Certifié(e)",
+
+        papersTitle: "Publications & Articles",
+        pubStatus: "Publié",
+        pub1Title: "Us Against Them: Oxytocin Response to Competition",
+        pub1Sub: "Mai 2026 — Proceedings of the Royal Society B",
+        readPaper: "Consulter l'article",
+        inPrep: "En Préparation",
+        pub2Title: "Beyond Familiar Bonds: Social Distance Elevates Oxytocin Levels in a Human Small-Scale Society",
+        pressTitle: "Presse & Médias",
+        pressTitleItem: "Réponse de l'ocytocine face à la compétition de groupe",
+        readPress: "Lire l'article de presse",
+        confTitle: "Conférences & Présentations",
+        confTalk: "Communication orale",
+        confPoster: "Poster"
       }
     };
 
@@ -1292,292 +1257,14 @@
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (i18n[currentLang][key]) {
-          el.textContent = i18n[currentLang][key];
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (i18n[currentLang][key]) {
-          el.placeholder = i18n[currentLang][key];
+          if (el.children.length > 0 && el.querySelector('strong')) {
+            el.innerHTML = i18n[currentLang][key];
+          } else {
+            el.textContent = i18n[currentLang][key];
+          }
         }
       });
     });
-
-    // -------------------------------------------------------------
-    // 4. GEMINI 3.1 FLASH LLM RESEARCH COMPANION CHATBOT
-    // -------------------------------------------------------------
-    function toggleAiModal() {
-      const modal = document.getElementById('ai-modal');
-      modal.classList.toggle('hidden');
-      modal.classList.toggle('flex');
-    }
-
-    const CHARLOTTE_CONTEXT_PROMPT = `
-You are the interactive AI Academic Companion for Charlotte Debras's online portfolio.
-Charlotte Debras is a PhD Candidate in Evolutionary Biology at the University of Zurich (Institute of Evolutionary Medicine), based in Zurich, Switzerland.
-
-KEY ACADEMIC PROFILE:
-- Current Position: PhD Candidate & Research Assistant in Evolutionary Biology (Sept 2022 - Present) at University of Zurich (UZH).
-- Academic Work Experience:
-  * PhD Researcher & Teaching Assistant at UZH (Sept 2022 - Present). Designed intergroup competition oxytocin studies, Bayesian modeling, teaching biostatistics.
-  * Graduate Research Assistant (Master M2) at MNHN Paris (2021-2022) - Grade 16.01/20.
-  * Evolutionary Ecology Research Intern (Master M1) at Université de Montpellier (2020-2021) - Grade 16.01/20.
-- Education & Certifications:
-  * PhD in Evolutionary Biology, UZH (Coursework: Behavioural economics, decision-making neuroscience, behavioural endocrinology, bayesian statistical modelling, leadership, project management).
-  * Master EEVEF (M2, 60 ECTS) at Muséum National d'Histoire Naturelle (MNHN Paris, 2021-2022) - Grade 16.01/20 Highest Honours (GPA 4.0).
-  * Master Darwin (M1, 60 ECTS) at Université de Montpellier (2020-2021) - Grade 16.01/20.
-  * Licence Biologie Ecologie Evolution (180 ECTS) at Université de Montpellier (2017-2020) - Grade 15/20.
-  * Certifications: Salesforce Sales Operations, Microsoft Power BI Data Analyst, IBM Financial Analysis and Modeling.
-- Key Skills:
-  * Code: R, Python, SQL.
-  * Tools: R Markdown, Quarto, Git, LaTeX, Pandas, Microsoft 365.
-  * Methods: Data analyses (Frequentist & Bayesian), Data visualisation, Financial modelling.
-  * Soft Skills: Cross-Cultural Communication, Scientific Storytelling, Teaching & Mentoring, Analytical Thinking, Problem Solving, Project Management, Adaptability.
-- Publications:
-  1. Debras et al. (2026) "Us Against Them: Oxytocin Response to Competition" published in Proceedings of the Royal Society B.
-  2. Debras et al. (In Prep) "Beyond Familiar Bonds: Social Distance Elevates Oxytocin Levels in a Human Small-Scale Society".
-- Conferences: Spoke at AABA (Denver 2026), EHBEA (Montpellier 2024), EFP (Lausanne 2024), FRESH (Lausanne 2024 & Paris 2023), ECBB (Zurich 2024).
-- Languages: French (Native), English (C1), Spanish (C1).
-- Personal: Based in Zurich (Swiss B permit holder), French citizen, Driving licence B. Interests in surfing, competitive golf, skiing, photography, filmmaking, music.
-
-YOUR GOAL: Answer visitor questions concisely, warmly, and accurately as an AI research assistant. Keep answers concise (1-3 brief paragraphs or bullet points). Match the user's language (English or French).
-`;
-
-    async function sendAiMessage() {
-      const inputEl = document.getElementById('ai-user-input');
-      const text = inputEl.value.trim();
-      if (!text) return;
-
-      inputEl.value = '';
-      const historyEl = document.getElementById('ai-chat-history');
-
-      // Append user bubble
-      const userBubble = document.createElement('div');
-      userBubble.className = "bg-sage-600 text-white p-3 rounded-2xl max-w-[85%] ml-auto text-xs leading-relaxed shadow-sm";
-      userBubble.textContent = text;
-      historyEl.appendChild(userBubble);
-
-      // Append AI typing bubble
-      const aiBubble = document.createElement('div');
-      aiBubble.className = "bg-emerald-50 dark:bg-emerald-950/40 text-slate-700 dark:text-slate-200 p-3 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 max-w-[90%] text-xs leading-relaxed flex items-center gap-2";
-      aiBubble.innerHTML = `<i class="fa-solid fa-spinner animate-spin text-emerald-600"></i> <span>Analyzing research context...</span>`;
-      historyEl.appendChild(aiBubble);
-      historyEl.scrollTop = historyEl.scrollHeight;
-
-      try {
-        const apiKey = "";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-        const payload = {
-          contents: [{ parts: [{ text: text }] }],
-          systemInstruction: {
-            parts: [{ text: CHARLOTTE_CONTEXT_PROMPT + `\nRespond in ${currentLang === 'FR' ? 'French' : 'English'}.` }]
-          }
-        };
-
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        const result = await response.json();
-        const responseText = result.candidates?.[0]?.content?.parts?.[0]?.text || "Unable to retrieve response at this time.";
-
-        aiBubble.innerHTML = responseText.replace(/\n/g, '<br>');
-      } catch (err) {
-        aiBubble.textContent = "Error connecting to AI service. Please try again.";
-      }
-      historyEl.scrollTop = historyEl.scrollHeight;
-    }
-
-    function askAiPreset(index) {
-      const presets = {
-        EN: [
-          "Summarize Charlotte's PhD research focus and work experience at UZH.",
-          "Tell me about her oxytocin research on group competition.",
-          "What are Charlotte's core competencies in Bayesian statistical modeling?",
-          "Why is Charlotte a great candidate for Postdoc or Research Scientist roles?"
-        ],
-        FR: [
-          "Résume le sujet de doctorat et le parcours de recherche de Charlotte à l'UZH.",
-          "Parle-moi de ses travaux sur l'ocytocine et la compétition.",
-          "Quelles sont les compétences de Charlotte en modélisation bayésienne ?",
-          "Pourquoi recruter Charlotte pour un poste de chercheuse ou Postdoc ?"
-        ]
-      };
-      const text = presets[currentLang][index - 1] || presets.EN[index - 1];
-      document.getElementById('ai-user-input').value = text;
-      sendAiMessage();
-    }
-
-    // -------------------------------------------------------------
-    // 5. GEMINI AI PLAIN LANGUAGE PAPER EXPLAINER
-    // -------------------------------------------------------------
-    async function explainPaperWithGemini(paperTitle) {
-      const box = document.getElementById('paper-explanation-box');
-      const textEl = document.getElementById('paper-explanation-text');
-      box.classList.remove('hidden');
-      textEl.innerHTML = `<i class="fa-solid fa-spinner animate-spin text-emerald-600"></i> ${currentLang === 'FR' ? 'Analyse de l\'article par Gemini...' : 'Generating plain language breakdown...'}`;
-
-      try {
-        const apiKey = "";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-        const prompt = `Explain the research paper titled "${paperTitle}" co-authored by Charlotte Debras (published in Proceedings of the Royal Society B, 2026) in clear, plain, accessible language for a non-specialist or prospective collaborator. Focus on the role of oxytocin in group competition. Respond in 2-3 clear sentences in ${currentLang === 'FR' ? 'French' : 'English'}.`;
-
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-        });
-
-        const result = await response.json();
-        const explanation = result.candidates?.[0]?.content?.parts?.[0]?.text;
-        textEl.textContent = explanation || "Paper summary unavailable.";
-      } catch (e) {
-        textEl.textContent = "Could not generate summary at this time.";
-      }
-    }
-
-    // -------------------------------------------------------------
-    // 6. GEMINI 2.5 FLASH TTS - AUDIO OVERVIEW NARRATION
-    // -------------------------------------------------------------
-    let audioObject = null;
-    let isTtsPlaying = false;
-
-    async function generateAiAudioOverview() {
-      const ttsBtn = document.getElementById('tts-btn');
-      const ttsText = document.getElementById('tts-text');
-      const ttsIcon = document.getElementById('tts-icon');
-      const ttsWave = document.getElementById('tts-wave');
-
-      if (isTtsPlaying && audioObject) {
-        audioObject.pause();
-        isTtsPlaying = false;
-        ttsText.textContent = i18n[currentLang].audioOverviewBtn;
-        ttsIcon.className = "fa-solid fa-volume-high text-[11px]";
-        ttsWave.classList.add('hidden');
-        ttsWave.classList.remove('flex');
-        return;
-      }
-
-      ttsText.textContent = currentLang === 'FR' ? "Génération vocale..." : "Synthesizing audio...";
-      ttsIcon.className = "fa-solid fa-spinner animate-spin text-[11px]";
-
-      try {
-        const apiKey = "";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
-
-        const narrationPrompt = currentLang === 'FR'
-          ? "Say warmly and professionally: Bienvenue sur le portfolio académique de Charlotte Debras, doctorante en biologie évolutive à l'Université de Zurich. Charlotte est spécialisée en endocrinologie comportementale et modélisation statistique bayésienne."
-          : "Say warmly and academically: Welcome to Charlotte Debras's research portfolio. Charlotte is a PhD candidate in Evolutionary Biology at the University of Zurich, specializing in behavioural endocrinology and Bayesian statistical modelling.";
-
-        const payload = {
-          contents: [{ parts: [{ text: narrationPrompt }] }],
-          generationConfig: {
-            responseModalities: ["AUDIO"],
-            speechConfig: {
-              voiceConfig: {
-                prebuiltVoiceConfig: { voiceName: "Aoede" }
-              }
-            }
-          }
-        };
-
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        const result = await response.json();
-        const part = result?.candidates?.[0]?.content?.parts?.[0];
-        const audioData = part?.inlineData?.data;
-        const mimeType = part?.inlineData?.mimeType || "audio/L16;rate=24000";
-
-        if (audioData) {
-          const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)?.[1] || "24000", 10);
-          const pcmBuffer = base64ToArrayBuffer(audioData);
-          const pcm16 = new Int16Array(pcmBuffer);
-          const wavBlob = pcmToWav(pcm16, sampleRate);
-          const audioUrl = URL.createObjectURL(wavBlob);
-
-          audioObject = new Audio(audioUrl);
-          audioObject.play();
-          isTtsPlaying = true;
-
-          ttsText.textContent = currentLang === 'FR' ? "Pause résumé" : "Pause Audio";
-          ttsIcon.className = "fa-solid fa-pause text-[11px]";
-          ttsWave.classList.remove('hidden');
-          ttsWave.classList.add('flex');
-
-          audioObject.onended = () => {
-            isTtsPlaying = false;
-            ttsText.textContent = i18n[currentLang].audioOverviewBtn;
-            ttsIcon.className = "fa-solid fa-volume-high text-[11px]";
-            ttsWave.classList.add('hidden');
-            ttsWave.classList.remove('flex');
-          };
-        } else {
-          ttsText.textContent = "Audio unavailable";
-          ttsIcon.className = "fa-solid fa-triangle-exclamation text-[11px]";
-        }
-      } catch (err) {
-        ttsText.textContent = "Audio Error";
-        ttsIcon.className = "fa-solid fa-triangle-exclamation text-[11px]";
-      }
-    }
-
-    function base64ToArrayBuffer(base64) {
-      const binaryString = window.atob(base64);
-      const len = binaryString.length;
-      const bytes = new Uint8Array(len);
-      for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-      }
-      return bytes.buffer;
-    }
-
-    function pcmToWav(pcm16Array, sampleRate = 24000) {
-      const numChannels = 1;
-      const bytesPerSample = 2;
-      const blockAlign = numChannels * bytesPerSample;
-      const byteRate = sampleRate * blockAlign;
-      const dataSize = pcm16Array.length * bytesPerSample;
-      const buffer = new ArrayBuffer(44 + dataSize);
-      const view = new DataView(buffer);
-
-      writeString(view, 0, 'RIFF');
-      view.setUint32(4, 36 + dataSize, true);
-      writeString(view, 8, 'WAVE');
-
-      writeString(view, 12, 'fmt ');
-      view.setUint32(16, 16, true);
-      view.setUint16(20, 1, true);
-      view.setUint16(22, numChannels, true);
-      view.setUint32(24, sampleRate, true);
-      view.setUint32(28, byteRate, true);
-      view.setUint16(32, blockAlign, true);
-      view.setUint16(34, 16, true);
-
-      writeString(view, 36, 'data');
-      view.setUint32(40, dataSize, true);
-
-      let offset = 44;
-      for (let i = 0; i < pcm16Array.length; i++, offset += 2) {
-        view.setInt16(offset, pcm16Array[i], true);
-      }
-
-      return new Blob([buffer], { type: 'audio/wav' });
-    }
-
-    function writeString(view, offset, string) {
-      for (let i = 0; i < string.length; i++) {
-        view.setUint8(offset + i, string.charCodeAt(i));
-      }
-    }
   </script>
 </body>
 </html>
