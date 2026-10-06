@@ -95,6 +95,24 @@
       box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
+    /* Onglets de navigation (état actif géré par la classe .active) */
+    .tab-btn {
+      color: #475569;
+      background: transparent;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .dark .tab-btn { color: #cbd5e1; }
+    @media (hover: hover) {
+      .tab-btn:not(.active):hover { color: #3758a4; }
+      .dark .tab-btn:not(.active):hover { color: #CDD7EA; }
+    }
+    .tab-btn.active,
+    .dark .tab-btn.active {
+      background: #3758a4;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(55, 88, 164, 0.35);
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
@@ -186,19 +204,19 @@
 
     <!-- NAVIGATION TABS -->
     <nav class="flex items-center justify-between p-1.5 bg-white/70 dark:bg-[#1f2c44]/70 border border-slate-200/80 dark:border-slate-800 rounded-2xl backdrop-blur-md shadow-sm text-xs font-semibold">
-      <button onclick="switchTab('about')" id="tab-about" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition bg-sage-600 text-white shadow">
+      <button onclick="switchTab('about')" id="tab-about" class="tab-btn active flex-1 py-2 px-1 rounded-xl text-center transition">
         <i class="fa-solid fa-user mr-1"></i>
         <span data-i18n="tabAbout">About me</span>
       </button>
-      <button onclick="switchTab('work')" id="tab-work" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition text-slate-600 dark:text-slate-300 hover:text-sage-600">
+      <button onclick="switchTab('work')" id="tab-work" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition">
         <i class="fa-solid fa-briefcase mr-1"></i>
         <span data-i18n="tabWork">Work Experience</span>
       </button>
-      <button onclick="switchTab('education')" id="tab-education" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition text-slate-600 dark:text-slate-300 hover:text-sage-600">
+      <button onclick="switchTab('education')" id="tab-education" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition">
         <i class="fa-solid fa-graduation-cap mr-1"></i>
         <span data-i18n="tabEdu">Education</span>
       </button>
-      <button onclick="switchTab('comms')" id="tab-comms" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition text-slate-600 dark:text-slate-300 hover:text-sage-600">
+      <button onclick="switchTab('comms')" id="tab-comms" class="tab-btn flex-1 py-2 px-1 rounded-xl text-center transition">
         <i class="fa-solid fa-flask mr-1"></i>
         <span data-i18n="tabComms">Comms</span>
       </button>
@@ -1009,8 +1027,8 @@
 
     function switchTab(tabId) {
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('bg-sage-600', 'text-white', 'shadow');
-        btn.classList.add('text-slate-600', 'dark:text-slate-300');
+        btn.classList.remove('active');
+        btn.blur();
       });
       document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.add('hidden'));
 
@@ -1018,8 +1036,7 @@
       const activePanel = document.getElementById(`panel-${tabId}`);
 
       if (activeBtn && activePanel) {
-        activeBtn.classList.add('bg-sage-600', 'text-white', 'shadow');
-        activeBtn.classList.remove('text-slate-600', 'dark:text-slate-300');
+        activeBtn.classList.add('active');
         activePanel.classList.remove('hidden');
       }
     }
